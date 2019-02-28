@@ -3,7 +3,8 @@
 ## This is a simple node boilerplate using Typescript
 
 ## Run the server
-npm start
+`npm start`
 
-## Build the project
-npm build
+## Run the Jest Tests
+`npm test`
+
