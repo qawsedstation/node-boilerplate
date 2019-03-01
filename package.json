@@ -1,17 +1,23 @@
 {
   "name": "node",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a boilerplate for node",
   "main": "index.ts",
   "scripts": {
     "start": "nodemon --exec 'ts-node' server.ts",
-    "test": "NODE_ENV=test jest --watchAll"
+    "test": "NODE_ENV=test jest --watchAll",
+    "docker-stop" : "docker stop node-demo && docker rm node-demo && docker rmi qawsedstation/node-demo",
+    "docker-build" : "docker build -t qawsedstation/node-demo:latest .",
+    "docker-push" : "docker push qawsedstation/node-demo:latest",
+    "docker-run" : "docker run --name node-demo -p 3000:3000 -d qawsedstation/node-demo:latest",
+    "docker-login" : "docker login -u qawsedstation"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "mongodb": "^3.1.13",
     "node-fetch": "^2.3.0",
     "nodemon": "^1.18.10"
   },
