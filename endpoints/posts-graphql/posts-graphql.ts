@@ -27,6 +27,7 @@ export const postsQueryResolver = async (_: any, { _id }: any) => {
     try {
         let post = await Posts.find({ "_id": new ObjectId(_id) })
         let data = await post.toArray();
+    
         return data;
     } catch (error) {
         throw new UserInputError(error);

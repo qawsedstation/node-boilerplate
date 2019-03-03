@@ -9,7 +9,7 @@ describe('Test the root path', () => {
     });
 
     test('It should response the GET method', () => {
-        return response(app).get('/').expect(200,{ 'Hello World!': 'Test' });
+        return response(app).get('/').expect(200,[ { _id: '5c79f29974ae3bf724019c20', title: '234' } ]);
     });
     
 })
