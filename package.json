@@ -5,9 +5,11 @@
   "main": "index.ts",
   "scripts": {
     "start": "nodemon --exec 'ts-node' server.ts",
+    "empty-node": "nodemon --exec 'ts-node' empty-node.ts",
     "test": "NODE_ENV=test jest --watchAll",
-    "docker-up": "docker compose up mongo",
-    "docker-run-mongo": "docker compose up mongo",
+    "docker-down": "docker-compose down",
+    "docker-up": "docker-compose up",
+    "docker-up-mongo": "docker-compose up mongo",
     "docker-stop": "docker stop node-demo && docker rm node-demo && docker rmi qawsedstation/node-demo",
     "docker-build": "docker build -t qawsedstation/node-demo:latest .",
     "docker-push": "docker push qawsedstation/node-demo:latest",
@@ -24,7 +26,8 @@
     "nodemon": "^1.18.10",
     "qs-middleware": "^1.0.3",
     "mongodb": "^3.1.13",
-    "graphql": "^14.1.1"
+    "graphql": "^14.1.1",
+    "rxjs": "~6.3.3"
   },
   "devDependencies": {
     "@types/es6-promise": "^3.3.0",
